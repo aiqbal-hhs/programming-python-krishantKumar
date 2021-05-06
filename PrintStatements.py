@@ -1,0 +1,6 @@
+name = input("What is your name?")
+age = input("What is your age?")
+address = input("What is your address?")
+print(name)
+print(age)
+print(address)
