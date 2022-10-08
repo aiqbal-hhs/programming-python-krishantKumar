@@ -12,6 +12,7 @@ answer_list = [
 answer = ""
 num_correct_ans = 0
 loop = True
+asking_name = True
 
 
 def mark_answer(answer):
@@ -31,50 +32,60 @@ def mark_answer(answer):
 
 # ------------------ Main program ------------------ #
 # asking users name using input
-#print(
-#    "\n\033[1;37mThis quiz will test your knowledge on Level 2 Calculus. "
-#    "You will start with 0 points.\n"
- #   ) 
+print(
+    "\n\033[1;37mThis quiz will test your knowledge on Level 2 Calculus. "
+    "You will start with 0 points.\n"
+   ) 
 #4 second pause
-#time.sleep(4)
-#print(
- #   "\033[1;37mif you get an answer \033[1;32mRight\033[1;37m, " 
-  #  "you gain 10 points but if you get an answer \033[1;31mWrong\033[1;37m, " 
-   # "you will not lose or gain any points.\n"
-   # )
+time.sleep(4)
+print(
+   "\033[1;37mIf you get an answer \033[1;32mRight\033[1;37m, " 
+   "you gain 10 points but if you get an answer \033[1;31mWrong\033[1;37m, " 
+   "you will not lose or gain any points.\n"
+)
 # 4 second pause
-#time.sleep(4)
-#print(
-  #  "\033[4;31m\033[1;31mRules:\033[0m\033[1;37m\n- When answering questions " 
- #   "with a power, use '^'.\n"
- #   )
+time.sleep(4)
+print(
+    "\033[4;31m\033[1;31mRules:\033[0m\033[1;37m\n- When answering questions " 
+    "with a power, use '^'.\n"
+)
 # 2 second pause
-#time.sleep(2)
-#print("- When answering questions with a fraction, use '/'.\n")
+time.sleep(2)
+print("- When answering questions with a fraction, use '/'.\n")
 # 2 second pause
-#time.sleep(2)
-#print("- You are allowed to use a calculator to answer these questions.\n")
-# 2 second pause
-#time.sleep(2)
-#print("- Remember to include the C value in Integration questions.\n")
+time.sleep(2)
+print("- You are allowed to use a calculator to answer these questions.\n")
+# 2 second pause 
+time.sleep(2)
+print("- Remember to include the C value in Integration questions.\n")
 # 5 second pause
-#time.sleep(5)
-#name = input("\033[1;37mWhat is your name?\n name:")
-#print("\nNice to meet you {}, good luck on this quiz!".format(name))
+time.sleep(5)
+
+# asks user their name
+while asking_name:
+    name = str(input("\033[1;37mWhat is your name?\n Name: ")).title()
+    if len(name) > 0:
+        print("\nNice to meet you {}, good luck on this quiz!".format(name))
+        asking_name = False
+    else:
+        print("\033[1;31m\nPlease enter a name!\033[0m")
+        time.sleep(0.5)
+        continue
+
 # 3 second pause
-#time.sleep(3)
-#print("The quiz starts in:")
+time.sleep(3)
+print("The quiz starts in:")
 # 1 second pause
-#time.sleep(1)
-#print("\033[1;32m3")
+time.sleep(1)
+print("\033[1;32m3")
 # 1 second pause
-#time.sleep(1)
-#print("2")
+time.sleep(1)
+print("2")
 # 1 second pause
-#time.sleep(1)
-#print("1\033[0m")
+time.sleep(1)
+print("1\033[0m")
 # 1 second pause
-#time.sleep(1)
+time.sleep(1)
 
 while loop:
     # Q1 - Differentiation
@@ -249,7 +260,7 @@ while loop:
 
 # 2 second pause
 time.sleep(2)
-print("\033[1;31m\nQUIZ ENDS\033[0m")
+print("\033[1;31m\nQUIZ HAS ENDED {}\033[0m".format(name))
 # 3 second pause 
 time.sleep(3) 
 print("\033[1;33mloading score")
@@ -266,20 +277,20 @@ time.sleep(1)
 # If, elif and else statement 
 if num_correct_ans >= 7 and num_correct_ans <=10:
     print(
-        "\033[1;32mGood job!"
-        "You scored {} out of 10".format(num_correct_ans)
+        "\033[1;32mGood job! {}"
+        "You scored {} out of 10".format(name, num_correct_ans)
     )
     print("Total points earned: {}\033[0m".format(points))
 elif num_correct_ans >= 3 and num_correct_ans <= 6:
     print(
-        "\033[1;33mYou did okay. You scored {} out of 10"
-        .format(num_correct_ans)
+        "\033[1;33mYou did okay {}. You scored {} out of 10"
+        .format(name, num_correct_ans)
     )
     print("Total points earned: {}\033[0m".format(points))
 else:
     print(
-        "\033[1;31mYou failed. "
+        "\033[1;31mYou failed {}. "
         "You scored {} out of 10. I am disappointed"
-        .format(num_correct_ans)
+        .format(name, num_correct_ans)
     )
     print("Total points earned: {}\033[0m".format(points))
