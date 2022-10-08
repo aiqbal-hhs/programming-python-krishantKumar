@@ -1,23 +1,23 @@
 import time
 
 # Creating lists and variables
-# Initial points equal to zero 
-points = 0
+points = 0 # Initial points equal to zero 
 # declaring answer list 
 answer_list = [
     "3x^2+4x-1", "x^2-x+1", "6x^2+4x-7", "30x^2-10x-1", "40x-15",
     "2x^2-12x+22", "2x^4-x^3+14x-32","2x^3-x^2+4x-15", 
     "x^3/3-5x^2/2+x+31/3", "1/3x^3-5/2x^2+x+31/3", "27x^4-16x^3-9x^2+52"
     ]
-answer = ""
-num_correct_ans = 0
+answer = "" # declaring answer variable 
+num_correct_ans = 0 # declaring correct number of answers variable 
 loop = True
 asking_name = True
 
 
+# this function marks the answer the user inputs 
 def mark_answer(answer):
-    global points
-    global num_correct_ans
+    global points # point variable accessible throughout the program 
+    global num_correct_ans # num_correct_ans accessible throughout program 
     if answer in answer_list:
         points += 10
         num_correct_ans += 1
@@ -91,7 +91,7 @@ while loop:
     # Q1 - Differentiation
     print('\033[1;34m\nQuestion 1:\033[0m')
     print("\033[1;36mDifferentiate the function f(x)= x^3+2x^2-x+6")
-    answer = str(input("f'(x) = \033[0m"))
+    answer = str(input("f'(x) = \033[0m")).replace(" ", "").lower()
     if len(answer) > 0:
         mark_answer(answer)
         break
@@ -107,7 +107,7 @@ while loop:
     # Q2 - Differentiation
     print('\033[1;34m\nQuestion 2:\033[0m')
     print("\033[1;36mDifferentiate the function f(x) = 1/3x^3-1/2x^2+x-1")
-    answer = str(input("f'(x) = \033[0m"))
+    answer = str(input("f'(x) = \033[0m")).replace(" ", "").lower()
     if len(answer) > 0:
         mark_answer(answer)
         break
@@ -123,7 +123,7 @@ while loop:
     # Q3 - Differentiation
     print('\033[1;34m\nQuestion 3:\033[0m')
     print("\033[1;36mDifferentiate the function f(x) = 4/2x^3+6/3x^2-7x-9")
-    answer = str(input("f'(x) = \033[0m"))
+    answer = str(input("f'(x) = \033[0m")).replace(" ", "").lower()
     if len(answer) > 0:
         mark_answer(answer)
         break
@@ -139,7 +139,7 @@ while loop:
     # Q4 - Differentiation
     print('\033[1;34m\nQuestion 4:\033[0m')
     print("\033[1;36mDifferentiate the function f(x) = 20/2x^3-15/3x^2-x+18")
-    answer = str(input("f'(x) = \033[0m"))
+    answer = str(input("f'(x) = \033[0m")).replace(" ", "").lower()
     if len(answer) > 0:
         mark_answer(answer)
         break
@@ -155,7 +155,7 @@ while loop:
     # Q5 - Differentiation
     print('\033[1;34m\nQuestion 5:\033[0m')
     print("\033[1;36mDifferentiate the function f(x) = 60/3x^2-15x+3")
-    answer = str(input("f'(x) = \033[0m"))
+    answer = str(input("f'(x) = \033[0m")).replace(" ", "").lower()
     if len(answer) > 0:
         mark_answer(answer)
         break
@@ -182,7 +182,7 @@ while loop:
     # Q6 - integration
     print('\033[1;34m\nQuestion 6:\033[0m')
     print("\033[1;36mIntegrate the function f'(x) = 4x-12 where f(5) = 12")
-    answer = str(input("f(x) = \033[0m"))
+    answer = str(input("f(x) = \033[0m")).replace(" ", "").lower()
     if len(answer) > 0:
         mark_answer(answer)
         break
@@ -197,8 +197,11 @@ while loop:
 while loop:
     # Q7 - integration
     print('\033[1;34m\nQuestion 7:\033[0m')
-    print("\033[1;36mIntegrate the function f'(x) = 8x^3-3x^2+14 where f(2) = 20")
-    answer = str(input("f(x) = \033[0m"))
+    print(
+        "\033[1;36mIntegrate the function "
+        "f'(x) = 8x^3-3x^2+14 where f(2) = 20"
+    )
+    answer = str(input("f(x) = \033[0m")).replace(" ", "").lower()
     if len(answer) > 0:
         mark_answer(answer)
         break
@@ -214,7 +217,7 @@ while loop:
     # Q8 - integration
     print('\033[1;34m\nQuestion 8:\033[0m')
     print("\033[1;36mIntegrate the function f'(x) = 6x^2-2x+4 where f(2) = 5")
-    answer = str(input("f(x) = \033[0m"))
+    answer = str(input("f(x) = \033[0m")).replace(" ", "").lower()
     if len(answer) > 0:
         mark_answer(answer)
         break
@@ -230,7 +233,7 @@ while loop:
     # Q9 - integration
     print('\033[1;34m\nQuestion 9:\033[0m')
     print("\033[1;36mIntegrate the function f'(x) = x^2-5x+1 where f(2) = 5")
-    answer = str(input("f(x) = \033[0m"))
+    answer = str(input("f(x) = \033[0m")).replace(" ", "").lower()
     if len(answer) > 0:
         mark_answer(answer)
         break
@@ -245,8 +248,11 @@ while loop:
 while loop:
     # Q10 - integration
     print('\033[1;34m\nQuestion 10:\033[0m')
-    print("\033[1;36mIntegrate the function f'(x) = 108x^3-48x^2-18x+4 where f(2) = 216")
-    answer = str(input("f(x) = \033[0m"))
+    print(
+        "\033[1;36mIntegrate the function "
+        "f'(x) = 108x^3-48x^2-18x+4 where f(2) = 216"
+    )
+    answer = str(input("f(x) = \033[0m")).replace(" ", "").lower()
     if len(answer) > 0:
         mark_answer(answer)
         break
@@ -260,24 +266,24 @@ while loop:
 
 # 2 second pause
 time.sleep(2)
-print("\033[1;31m\nQUIZ HAS ENDED {}\033[0m".format(name))
+print("\033[1;31m\nQUIZ HAS ENDED\033[0m")
 # 3 second pause 
 time.sleep(3) 
-print("\033[1;33mloading score")
+print("\033[1;33mloading {}'s score".format(name))
 # 1 second pause
 time.sleep(1)
-print("loading score.")
+print("loading {}'s score.".format(name))
 # 0.1 second pause
 time.sleep(0.1)
-print("loading score..")
+print("loading {}'s score..".format(name))
 # 0.5 second pause
 time.sleep(0.5)
-print("loading score...\033[0m")
+print("loading {}'s score...\033[0m\n".format(name))
 time.sleep(1)
 # If, elif and else statement 
 if num_correct_ans >= 7 and num_correct_ans <=10:
     print(
-        "\033[1;32mGood job! {}"
+        "\033[1;32mGood job! {}. "
         "You scored {} out of 10".format(name, num_correct_ans)
     )
     print("Total points earned: {}\033[0m".format(points))
